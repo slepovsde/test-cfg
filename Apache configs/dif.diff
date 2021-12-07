@@ -1,0 +1,10 @@
+lt\ apache2.conf modified\ apache2.conf && echo dif.diff
+105c105
+< MaxKeepAliveRequests 100
+---
+> MaxKeepAliveRequests 25
+194a195,198
+> <DirectoryMatch .*\.(svn|git|hg|bzr|cvs)/.*>
+>     Deny From All
+> </DirectoryMatch>
+> 

@@ -1,0 +1,25 @@
+> include /etc/nginx/sites-enabled/*;
+> include /etc/nginx/conf.d/*;
+7c9
+< 	worker_connections 768;
+---
+> 	worker_connections 1024;
+22c24,25
+< 	# server_tokens off;
+---
+> 	client_max_body_size 500m; 
+> 	server_tokens off;
+50,55c53,58
+< 	# gzip_vary on;
+< 	# gzip_proxied any;
+< 	# gzip_comp_level 6;
+< 	# gzip_buffers 16 8k;
+< 	# gzip_http_version 1.1;
+< 	# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+---
+> 	gzip_vary on;
+> 	gzip_proxied any;
+> 	gzip_comp_level 6;
+> 	gzip_buffers 16 8k;
+> 	gzip_http_version 1.1;
+> 	gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;

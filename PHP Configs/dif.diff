@@ -1,0 +1,14 @@
+137c137
+< ;   Default Value: 100
+---
+> ;   Default Value: 10
+846c846
+< upload_max_filesize = 2M
+---
+> upload_max_filesize = 64M
+1423c1423,1424
+< session.gc_maxlifetime = 1440
+---
+> session.gc_maxlifetime = 86400
+> session.cookie_lifetime = 0
+
